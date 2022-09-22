@@ -2,6 +2,11 @@ try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
   name = 'sorentest',         # How you named your package folder (MyLib)
   packages = ['sorentest'],   # Chose the same as "name"
@@ -13,7 +18,9 @@ setup(
   url = 'https://github.com/sqbl/SorenTest',   # Provide either the link to your github or to your website
   keywords = ['SOME', 'MEANINGFULL', 'KEYWORDS'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
-          'numpy',
-          
+          'numpy',          
       ],
+  extras_require={
+          "add1": ['matplotlib']
+          },
   )
