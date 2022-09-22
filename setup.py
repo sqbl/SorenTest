@@ -23,6 +23,6 @@ setup(
       ],
   extras_require={
           "add1": ['matplotlib'],
-          "add2": ['matplotlib', numpy==1.23.1]
+          "add2": ['matplotlib', 'numpy==1.23.1']
           },
   )
